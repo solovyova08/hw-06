@@ -1010,6 +1010,12 @@ input {
   width: 100%;
 }
 
+.footer-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .footer-input-email {
   width: 264px;
   height: 40px;
@@ -1066,7 +1072,7 @@ input {
 
   .footer-logo-soc {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
   }
 
   .footer-p {
@@ -1075,6 +1081,59 @@ input {
     align-items: center;
   }
 
+  .footer-subscribe-text {
+    display: flex;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .footer-input-box {
+    flex-direction: row;
+  }
+
+  .footer-subscribe-form {
+    align-items: flex-start;
+  }
+}
+
+/*?========== MEDIA FOOTER DESKTOP ==========*/
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .footer-p {
+    margin-right: 120px;
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .footer-soc-media {
+    margin-bottom: 0;
+  }
+
+  .footer-soc-text {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe-form {
+    margin-left: 24px;
+  }
+
+  .footer-subscribe-text {
+    padding-left: 24px;
+  }
+}
 
 /* ========== MODAL =========== */
 
