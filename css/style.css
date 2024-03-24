@@ -57,6 +57,7 @@ input {
 .header {
   background-color: #ffffff;
   position: fixed;
+  z-index: 1;
   width: 100%;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -69,7 +70,8 @@ input {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header-logo {
@@ -175,14 +177,16 @@ input {
 }
 
 .address-link {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
   color: #434455;
   font-family: Roboto;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  /* line-height: 1.5; */
+  line-height: 1.16;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -195,15 +199,62 @@ input {
 .address-list-item {
 }
 
-/*?========== HEADER TAB ==========*/
+/*?========== MEDIA HEADER TABLET ==========*/
 
 @media (min-width: 768px) {
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+
+  .header-logo {
+    margin-right: 120px;
+  }
+
+  .nav {
+    margin: 0;
+    padding-left: 16px;
+  }
+
   .menu-open-btn {
     display: none;
   }
   .nav-list,
   .address {
     display: flex;
+  }
+
+  .address-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/*?========== MEDIA HEADER DESKTOP ==========*/
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 100%;
+    max-width: 1158px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .address-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .nav {
+    margin: 0 auto;
+  }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
   }
 }
 
@@ -330,8 +381,6 @@ input {
 }
 .mob-menu-soc-item {
 }
-
-/*?========== MEDIA HEADER TABLET ========== */
 
 /* ===== HERO ===== */
 
@@ -849,15 +898,21 @@ input {
 /* ===== FOOTER ===== */
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  margin: 0;
+  /* display: flex;
+  align-items: baseline; */
 }
 
 .footer-p {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  margin-bottom: 72px;
 }
 
 .logo-footer-link {
@@ -869,8 +924,10 @@ input {
   line-height: 1.16;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 17.5px;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .footer-logo-studio {
@@ -881,7 +938,12 @@ input {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  /* max-width: 264px; */
+  width: 288px;
+}
+
+.footer-soc-media {
+  margin-bottom: 72px;
 }
 
 .footer-soc-text {
@@ -892,6 +954,8 @@ input {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-soc-list {
@@ -932,12 +996,18 @@ input {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  margin-left: 56px;
+  /* margin-left: 56px; */
+  display: flex;
+  justify-content: center;
 }
 
 .footer-subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  /* gap: 24px; */
+  width: 100%;
 }
 
 .footer-input-email {
@@ -955,7 +1025,7 @@ input {
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.04em;
-  margin-left: 56px;
+  /* margin-left: 56px; */
 }
 
 .subscribe-button {
@@ -985,6 +1055,26 @@ input {
   margin-left: 16px;
   fill: #ffffff;
 }
+
+/*?========== MEDIA FOOTER TABLET ==========*/
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 96px;
+    padding-left: 108px;
+  }
+
+  .footer-logo-soc {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
 /* ========== MODAL =========== */
 
