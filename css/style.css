@@ -205,7 +205,6 @@ input {
   .container {
     padding-top: 0;
     padding-bottom: 0;
-    margin-left: 0;
   }
 
   .header-logo {
@@ -248,7 +247,7 @@ input {
     line-height: 1.5;
   }
 
-  .nav {
+  .header-container {
     margin: 0 auto;
   }
 
@@ -755,7 +754,7 @@ input {
   }
 
   .our-team {
-    padding: 120px 156px;
+    padding: 120px auto;
   }
 
   .our-team-list {
@@ -1133,6 +1132,9 @@ input {
   .footer-subscribe-text {
     padding-left: 24px;
   }
+  .footer-form-wrap {
+    margin-left: auto;
+  }
 }
 
 /* ========== MODAL =========== */
@@ -1141,6 +1143,7 @@ input {
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
@@ -1158,12 +1161,15 @@ input {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  /* width: 408px; */
+  width: 288px;
+  min-height: 623px;
+  /* min-height: 584px; */
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 24px 24px 24px;
+  /* padding: 72px 24px 24px 24px; */
+  padding: 24px 16px;
   transform: translate(-50%, -50%) scale(1);
   background-color: #fcfcfc;
   border-radius: 4px;
@@ -1182,7 +1188,7 @@ input {
   top: 24px;
   right: 24px;
   padding: 0;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -1215,6 +1221,7 @@ input {
   letter-spacing: 0.02em;
   margin: 0 auto;
   margin-bottom: 16px;
+  margin-top: 48px; /*додала для моб версії*/
 }
 
 .modal-input {
@@ -1303,6 +1310,7 @@ input {
   height: 120px;
   color: rgba(46, 47, 66, 0.4);
   font-family: Roboto;
+  color: #8e8f99;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1335,7 +1343,7 @@ input {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-left: 8px;
+  /* margin-left: 8px; */
 }
 
 .modal-checkbox {
@@ -1376,6 +1384,7 @@ input {
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.04em;
+  padding-left: 24px; /*додала для моб версії*/
 }
 
 .button-input {
@@ -1403,4 +1412,27 @@ input {
 .button-input:hover,
 .button-input:focus {
   background-color: #404bbf;
+}
+
+/*?========== MEDIA MODAL TABLET ==========*/
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 24px;
+  }
+
+  .label-checkbox {
+    margin-left: 8px;
+  }
+
+  .privacy-link {
+    padding-left: 0;
+  }
+}
+
+/*?========== MEDIA MODAL DESKTOP ==========*/
+
+@media screen and (min-width: 1158px) {
 }
